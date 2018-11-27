@@ -1,0 +1,48 @@
+/*会编译*/
+.juzhong,
+#wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.juzhong:hover,
+#wrap:hover {
+  background: saddlebrown;
+}
+#wrap {
+  width: 100px;
+  height: 100px;
+  background-color: firebrick;
+}
+#wrap .inner {
+  width: 50px;
+  height: 50px;
+  background-color: gray;
+}
+#wrap {
+  width: 200px;
+  height: 100px;
+}
+#wrap .inner {
+  i: 3;
+}
+#wrap:hover .inner {
+  background-color: rebeccapurple;
+}
+#wrap .tr {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-width: 20px;
+  border-color: transparent transparent gray transparent;
+  border-style: dashed  dashed solid dashed;
+}
+#wrap {
+  width: 300px;
+}
+#wrap {
+  padding: cacl(100px + 20px);
+}

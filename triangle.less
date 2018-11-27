@@ -1,0 +1,30 @@
+//混合：类似函数,以.开头，为防止编译常加()
+//参数：@开头
+//默认值： ：
+//！！！匹配 类似原型 @匹配  _代表所有 数量一样就行
+//@arguments  传进的实参列表 简写那种的 不太用
+.triangle(@_,@www,@cccc){
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+.triangle(R,@w:50px,@color){
+    border-width: @w;
+    border-color: transparent @color transparent transparent;
+    border-style: dashed solid dashed dashed;
+}
+.triangle(L,@w:50px,@color){
+    border-width: @w;
+    border-color: transparent transparent transparent @color;
+    border-style: dashed  dashed dashed solid;
+}
+.triangle(T,@w:50px,@color){
+    border-width: @w;
+    border-color: @color transparent transparent transparent;
+    border-style: solid dashed  dashed dashed;
+}
+.triangle(B,@w:50px,@color){
+    border-width: @w;
+    border-color: transparent transparent @color transparent;
+    border-style: dashed  dashed solid dashed;
+}

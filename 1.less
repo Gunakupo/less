@@ -1,0 +1,64 @@
+/*会编译*/
+//不会编译
+
+//导入文件 混合的在里面
+@import "triangle.less";
+//导入继承
+@import "extend.less";
+
+//@selector,@属性时要用 @{} ,变量不用
+@color:gray;
+@width:width;
+@ele:wrap;
+#wrap{
+    width: 100px;
+    height: 100px;
+    background-color: firebrick;
+    .inner{
+        width: 50px;
+        height: 50px;
+        background-color: @color;
+    }
+}
+#@{ele}{
+    @{width}: 200px;
+    height: 100px}
+
+//延迟加载
+#wrap{
+    @i:1;
+    .inner{
+        @i:2;
+        i:@i;
+        @i:3;
+    }
+}
+
+//&相当于this 用于伪类等情况
+#wrap{
+    &:hover .inner{
+        background-color: rebeccapurple;
+     }
+}
+
+//命名参数：多形参指定参数值 
+#wrap{
+    .tr{
+        .triangle(B,20px,gray);
+    }
+}
+
+//运算 加减乘除
+#wrap{
+    width:200+100px;
+}
+
+//继承 使用extend函数 继承所有行为all 方便阅读&:
+#wrap{
+    &:extend(.juzhong all);
+}
+
+//避免编译 前缀~ 
+#wrap{
+    padding: ~"cacl(100px + 20px)";
+}
